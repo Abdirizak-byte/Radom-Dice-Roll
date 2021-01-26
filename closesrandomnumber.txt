@@ -1,0 +1,17 @@
+import random
+
+List1 = []
+List2 = []
+
+for i in range (10):
+    number = random.randrange(1,51)
+    List1.append(number)
+print(List1)
+
+N = float(input('Your Guess 1 to 50: '))
+
+for i in List1:
+    low = abs(i - N)
+    List2.append(low)
+index = List2.index(min(List2))
+print("The closet number to", N, "on this list is", List1[index])
